@@ -1,0 +1,4 @@
+exports.framework:query('CREATE TABLE IF NOT EXISTS players(id INTEGER AUTO_INCREMENT, name VARCHAR(100), steam_id VARCHAR(350), whitelisted BOOLEAN, banned BOOLEAN, bantime VARCHAR(100) NOT NULL DEFAULT "", banreason VARCHAR(1000) NOT NULL DEFAULT "", banadmin VARCHAR(100) NOT NULL DEFAULT "", primary key (id))')
+exports.framework:query('CREATE TABLE IF NOT EXISTS economy(id INTEGER AUTO_INCREMENT, player_id INTEGER, identifier VARCHAR(350), cash INTEGER, bank INTEGER, primary key (id))')
+exports.framework:query('CREATE TABLE IF NOT EXISTS ranks(id INTEGER AUTO_INCREMENT, player_id INTEGER, identifier VARCHAR(350), rank INTEGER, rankPoints INTEGER, primary key (id))')
+exports.framework:query('CREATE TABLE IF NOT EXISTS contacts(id INTEGER AUTO_INCREMENT, player_id INTEGER, identifier VARCHAR(350), contact_name VARCHAR(350), contact_id INTEGER, contact_identifier VARCHAR(350), primary key (id))')
